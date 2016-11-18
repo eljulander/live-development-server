@@ -15,8 +15,8 @@ function processRequest(req, res) {
 }
 
 var options ={
-    key:fs.readFileSync("./keys/localhost-key.pem"),
-    cert:fs.readFileSync("./keys/localhost-cert.pem")
+    key:fs.readFileSync("./keys/localhost.key"),
+    cert:fs.readFileSync("./keys/localhost.cert")
 }
 
 https.createServer(options,processRequest).listen(8000)
